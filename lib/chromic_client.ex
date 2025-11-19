@@ -211,8 +211,7 @@ defmodule ChromicClient do
     if Code.ensure_loaded?(ChromicPDF) do
       apply(ChromicPDF, function, [input, opts])
     else
-      {:error,
-       :chromic_pdf_not_available,
+      {:error, :chromic_pdf_not_available,
        "ChromicPDF is not available. Install it or switch to :api mode."}
     end
   end
